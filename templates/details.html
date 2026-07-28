@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}
+Mood Details
+{% endblock %}
+
+{% block content %}
+
+<div class="page-navigation">
+    <a href="{{ url_for('history') }}">
+        ⬅️ back to history
+    </a>
+
+    <a href="{{ url_for('home') }}">
+        🏠 home
+    </a>
+</div>
+
+<h2>{{ entry.date }} mood entry details</h2>
+
+<p>
+
+<strong>time:</strong>
+
+{{ entry.time }}
+
+</p>
+
+<p>
+
+<strong>mood:</strong>
+
+{{ entry.emoji }}
+
+{{ entry.mood_name }}
+
+</p>
+
+<p>
+
+<strong>note:</strong>
+
+</p>
+
+{% if entry.note %}
+
+<p>
+
+{{ entry.note }}
+
+</p>
+
+{% else %}
+
+<p>
+
+No note was entered.
+
+</p>
+
+{% endif %}
+
+
+{% endblock %}

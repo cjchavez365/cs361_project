@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}
+📖 mood history 📖
+{% endblock %}
+
+{% block content %}
+
+<div class="page-navigation">
+
+    <a href="{{ url_for('home') }}">
+        ⬅️ back
+    </a>
+
+    <a href="{{ url_for('home') }}">
+        🏠 home
+    </a>
+
+</div>
+
+<h2>📖 mood history 📖</h2>
+<h3> scroll and review or revisit an entry </h3>
+
+{% if entry_saved %}
+<p>
+mood successfully saved!
+</p>
+{% endif %}
+
+{% if entries %}
+
+<table border="1">
+
+<tr>
+
+<th>date</th>
+<th>mood</th>
+<th>emoji</th>
+<th></th>
+
+</tr>
+
+{% for entry in entries %}
+
+<tr>
+
+<td>
+{{ entry.date }}
+</td>
+
+<td>
+{{ entry.emoji }}
+</td>
+
+<td>
+{{ entry.mood_name }}
+</td>
+
+<td>
+
+<a
+href="{{ url_for('details', entry_id=entry.id) }}">
+more details
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<p>
+no mood entries have been recorded.
+</p>
+
+<a href="{{ url_for('create_entry') }}">
+create your first entry
+</a>
+
+{% endif %}
+
+{% endblock %}

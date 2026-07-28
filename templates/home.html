@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+ 
+<div class="home-buttons">
+    <a class="home-button" href="{{ url_for('create_entry') }}">
+        <span class="button-icon">➕</span>
+        <span>create mood entry</span>
+    </a>
+
+    <a class="home-button" href="{{ url_for('history') }}">
+        <span class="button-icon">📖</span>
+        <span>view mood history</span>
+    </a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #cccccc;
+}
+
+header h1 {
+    margin: 0 0 0.5rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: #222;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+#cancel-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+}
+
+#cancel-modal button,
+#cancel-modal a {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font: inherit;
+    resize: vertical;
+}
+
+form button {
+    margin-right: 0.5rem;
+}
+
+#cancel-button {
+    background-color: white;
+    color: #222;
+}
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    text-align: left;
+}
+
+th {
+    background-color: #eeeeee;
+}
+
+table a {
+    color: #222;
+}
+
+#cancel-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+#cancel-modal > div,
+#cancel-modal {
+    text-align: center;
+}
+
+#cancel-modal {
+    color: #222;
+}
+
+#cancel-modal h3,
+#cancel-modal p,
+#cancel-modal button,
+#cancel-modal a {
+    position: relative;
+    z-index: 1;
+}
+
+#cancel-modal::before {
+    content: "";
+    position: absolute;
+    width: min(400px, 90%);
+    height: 230px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#cancel-modal h3,
+#cancel-modal p {
+    max-width: 330px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem;
+    }
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 8rem;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 270px;
+    min-height: 120px;
+    padding: 1.25rem;
+
+    border: 2px solid #222;
+    background-color: white;
+    color: #222;
+
+    font-size: 1.35rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #f2f2f2;
+}
+
+.button-icon {
+    font-size: 2rem;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.page-navigation a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: white;
+    color: #222;
+    text-decoration: none;
+}
+
+.page-navigation a:hover {
+    background-color: #f2f2f2;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.page-navigation a {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: white;
+    color: #222;
+    text-decoration: none;
+}
+
+.page-navigation a:hover {
+    background-color: #f2f2f2;
+}

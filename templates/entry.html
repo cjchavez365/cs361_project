@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}
+➕ mood entry ➕
+{% endblock %}
+
+{% block content %}
+
+<h2>➕ mood entry ➕</h2>
+<h3> how are you feeling? </h3>
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+
+<form method="POST">
+
+<h3>choose a mood:</h3>
+
+{% for mood_key, mood in moods.items() %}
+
+<label>
+
+<input
+type="radio"
+name="mood"
+value="{{ mood_key }}"
+required>
+
+{{ mood.emoji }} {{ mood.name }}
+
+</label>
+
+<br>
+
+{% endfor %}
+
+<br>
+
+<label>
+
+✏️ optional note...
+
+</label>
+
+<br>
+
+<textarea
+name="note"
+rows="5"
+cols="50"
+maxlength="500"
+>{{ previous_note }}</textarea>
+
+<br><br>
+
+<p> optional notes help you remember what influenced your mood </p>
+
+<button type="submit">
+✔️ save entry
+</button>
+
+<button
+type="button"
+id="cancel-button">
+🚫 cancel
+</button>
+
+</form>
+
+<div
+    id="cancel-modal"
+    class="hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cancel-title"
+>
+    <div class="modal-content">
+        <h3 id="cancel-title">
+            are you sure you want to cancel?
+        </h3>
+
+    <a
+        class="confirm-button"
+        href="{{ url_for('home') }}">
+        yes
+    </a>
+
+    <button
+        class="confirm-button"
+        type="button"
+        id="keep-editing-button">
+        no
+    </button>
+    </div>
+</div>
+
+{% endblock %}
