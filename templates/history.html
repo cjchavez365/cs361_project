@@ -6,80 +6,116 @@
 
 {% block content %}
 
-<div class="page-navigation">
+<a href="{{ url_for('home') }}" class="button-link">
+    ⬅️ back
+</a>
 
-    <a href="{{ url_for('home') }}">
-        ⬅️ back
+<a href="{{ url_for('home') }}" class="button-link">
+    🏠 home
+</a>
+
+<h1>📖 mood history 📖</h1>
+
+<a href="{{ url_for('favorites') }}" class="button-link">
+    ⭐ view favorites
+</a>
+
+<form
+    action="{{ url_for('history') }}"
+    method="GET"
+>
+    <label for="search">
+        search mood notes:
+    </label>
+
+    <input
+        type="text"
+        id="search"
+        name="search"
+        value="{{ search }}"
+        placeholder="ex. work"
+    >
+
+    <button type="submit">
+        search
+    </button>
+</form>
+
+{% if search %}
+    <p>
+        showing results for:
+        <strong>{{ search }}</strong>
+    </p>
+
+    <a href="{{ url_for('history') }}">
+        clear search
     </a>
-
-    <a href="{{ url_for('home') }}">
-        🏠 home
-    </a>
-
-</div>
-
-<h2>📖 mood history 📖</h2>
-<h3> scroll and review or revisit an entry </h3>
-
-{% if entry_saved %}
-<p>
-mood successfully saved!
-</p>
 {% endif %}
 
 {% if entries %}
 
-<table border="1">
+    {% for entry in entries %}
 
-<tr>
+        <div class="mood-entry">
 
-<th>date</th>
-<th>mood</th>
-<th>emoji</th>
-<th></th>
+            <h2>
+                {{ entry.emoji }}
+                {{ entry.mood_name }}
+            </h2>
 
-</tr>
+            <p>
+                {{ entry.formatted_date }}
+                at
+                {{ entry.formatted_time }}
+            </p>
 
-{% for entry in entries %}
+            {% if entry.note %}
+                <p>
+                    {{ entry.note }}
+                </p>
+            {% else %}
+                <p>
+                    No note was entered.
+                </p>
+            {% endif %}
 
-<tr>
+            <a href="{{ url_for('details', entry_id=entry.id) }}">
+                more details
+            </a>
 
-<td>
-{{ entry.date }}
-</td>
+            {% if entry.is_favorite %}
 
-<td>
-{{ entry.emoji }}
-</td>
+                <form
+                    action="{{ url_for('remove_favorite', entry_id=entry.id) }}"
+                    method="POST"
+                >
+                    <button type="submit">
+                        ⭐ remove favorite
+                    </button>
+                </form>
 
-<td>
-{{ entry.mood_name }}
-</td>
+            {% else %}
 
-<td>
+                <form
+                    action="{{ url_for('add_favorite', entry_id=entry.id) }}"
+                    method="POST"
+                >
+                    <button type="submit">
+                        ☆ favorite
+                    </button>
+                </form>
 
-<a
-href="{{ url_for('details', entry_id=entry.id) }}">
-more details
-</a>
+            {% endif %}
 
-</td>
+        </div>
 
-</tr>
-
-{% endfor %}
-
-</table>
+    {% endfor %}
 
 {% else %}
 
-<p>
-no mood entries have been recorded.
-</p>
-
-<a href="{{ url_for('create_entry') }}">
-create your first entry
-</a>
+    <p>
+        You don't have any mood entries yet.
+    </p>
 
 {% endif %}
 

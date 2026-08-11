@@ -8,5 +8,315 @@
         "date": "07/27/2026",
         "time": "08:42 PM",
         "created_at": "2026-07-27T20:42:56.544160"
+    },
+    {
+        "id": "669b4de5-64b4-4f51-9c6e-48ef44d985ca",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "qwert",
+        "date": "08/09/2026",
+        "time": "11:19 PM",
+        "created_at": "2026-08-09T23:19:00.309481"
+    },
+    {
+        "id": "8393521b-ad8e-4545-b9a5-433840811e6b",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "testing note",
+        "date": "08/10/2026",
+        "time": "12:23 AM",
+        "created_at": "2026-08-10T00:23:21.161978"
+    },
+    {
+        "id": "b027ed6c-29f5-4968-8371-163aefb3ed24",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "test",
+        "date": "08/10/2026",
+        "time": "12:26 AM",
+        "created_at": "2026-08-10T00:26:16.475142"
+    },
+    {
+        "id": "4c369ebd-f162-4437-a2da-ab4a34101ff5",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "testing entry",
+        "date": "08/10/2026",
+        "time": "12:27 AM",
+        "created_at": "2026-08-10T00:27:40.392101"
+    },
+    {
+        "id": "19a497de-c61f-4e85-b5d4-8f896401717e",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "qwer",
+        "date": "08/10/2026",
+        "time": "12:29 AM",
+        "created_at": "2026-08-10T00:29:45.972446"
+    },
+    {
+        "id": "f8b59bf0-13d1-495a-ab46-7c7732c04f81",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "qwert",
+        "date": "08/10/2026",
+        "time": "12:31 AM",
+        "created_at": "2026-08-10T00:31:45.230407"
+    },
+    {
+        "id": "05ccab49-e205-428c-855f-bbdb0dd92ecc",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "qwertyuiop",
+        "date": "08/10/2026",
+        "time": "12:58 AM",
+        "created_at": "2026-08-10T00:58:57.288164"
+    },
+    {
+        "id": "6fa2e796-19cd-4c0f-b3f7-c1f158e48041",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "Had a great day at work",
+        "date": "08/10/2026",
+        "time": "01:10 AM",
+        "created_at": "2026-08-10T01:10:05.791837"
+    },
+    {
+        "id": "4c0ff841-294a-4066-93b0-f09f12f23549",
+        "mood_key": "sad",
+        "mood_name": "sad",
+        "emoji": "\ud83d\ude22",
+        "note": "I have too much homework",
+        "date": "08/10/2026",
+        "time": "01:10 AM",
+        "created_at": "2026-08-10T01:10:15.963521"
+    },
+    {
+        "id": "9c0585af-01d9-4d6e-8891-0bffd81fb580",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "Went to the beach today",
+        "date": "08/10/2026",
+        "time": "01:10 AM",
+        "created_at": "2026-08-10T01:10:26.538224"
+    },
+    {
+        "id": "a77b1022-36b0-45ba-98bd-90c17ab4c6c6",
+        "mood_key": "angry",
+        "mood_name": "angry",
+        "emoji": "\ud83d\ude20",
+        "note": "Work was frustrating",
+        "date": "08/10/2026",
+        "time": "01:10 AM",
+        "created_at": "2026-08-10T01:10:41.079973"
+    },
+    {
+        "id": "07ffc0bd-3364-4b35-83e9-b653e717eaa7",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "Watched a movie",
+        "date": "08/10/2026",
+        "time": "01:10 AM",
+        "created_at": "2026-08-10T01:10:55.211084"
+    },
+    {
+        "id": "e1014bef-c00d-4078-9393-06391c49d3ea",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "\"I finished all of my assignments today.\"",
+        "date": "08/10/2026",
+        "time": "06:43 AM",
+        "created_at": "2026-08-10T06:43:45.125241"
+    },
+    {
+        "id": "276540e3-fcd3-4743-8827-bbf653082631",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "I finished all of my assignments today.",
+        "date": "08/10/2026",
+        "time": "06:50 AM",
+        "created_at": "2026-08-10T06:50:21.385681"
+    },
+    {
+        "id": "d3d0d9e9-73b6-4614-95aa-5358ba0eabb0",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "I finished all of my assignments today.",
+        "date": "08/10/2026",
+        "time": "06:54 AM",
+        "created_at": "2026-08-10T06:54:50.728069"
+    },
+    {
+        "id": "f888a600-b1d6-4ac2-9ae8-da3d8e54484e",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "I will complete all my assignments today.",
+        "date": "08/10/2026",
+        "time": "06:57 AM",
+        "created_at": "2026-08-10T06:57:11.084741"
+    },
+    {
+        "id": "020b1a3f-6e2f-47f4-98c6-e7cdf14dc502",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "I will finish my assignments today",
+        "date": "08/10/2026",
+        "time": "07:02 AM",
+        "created_at": "2026-08-10T07:02:19.527055"
+    },
+    {
+        "id": "45c5e4f5-ddc1-4263-82e9-2f4cab0098c2",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "I'm happy with testing my main so far with the microservice",
+        "date": "08/10/2026",
+        "time": "07:15 AM",
+        "created_at": "2026-08-10T07:15:38.302635"
+    },
+    {
+        "id": "8b19bf83-8b4b-4443-9ecb-ba42dcacc1e5",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "happy happy happy",
+        "date": "08/10/2026",
+        "time": "04:42 PM",
+        "created_at": "2026-08-10T16:42:18.367890"
+    },
+    {
+        "id": "3c259c81-8c25-48fd-a8e9-6049397664db",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "I will finish everything I have planned for today",
+        "date": "08/10/2026",
+        "time": "04:46 PM",
+        "created_at": "2026-08-10T16:46:53.145495"
+    },
+    {
+        "id": "40ad48f8-b828-4865-9684-eea084f3195d",
+        "mood_key": "neutral",
+        "mood_name": "neutral",
+        "emoji": "\ud83d\ude10",
+        "note": "",
+        "date": "08/10/2026",
+        "time": "04:56 PM",
+        "created_at": "2026-08-10T16:56:34.065379"
+    },
+    {
+        "id": "44851efb-3eb0-4907-97ab-90cf733d646e",
+        "mood_key": "neutral",
+        "mood_name": "neutral",
+        "emoji": "\ud83d\ude10",
+        "note": "my cat is eating paper",
+        "date": "08/10/2026",
+        "time": "04:59 PM",
+        "created_at": "2026-08-10T16:59:34.628437"
+    },
+    {
+        "id": "b8f0d4bf-d131-4dfc-a719-092e03c3b80a",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "this is working so far please keep working",
+        "date": "08/10/2026",
+        "time": "05:16 PM",
+        "created_at": "2026-08-10T17:16:50.992977"
+    },
+    {
+        "id": "8bb0864f-9483-4da8-bc59-9c09fd28421c",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "tesitng",
+        "date": "08/10/2026",
+        "time": "05:33 PM",
+        "created_at": "2026-08-10T17:33:24.886906"
+    },
+    {
+        "id": "d4a2bcc7-27eb-4b6f-8fc1-3dc50570faba",
+        "mood_key": "sad",
+        "mood_name": "sad",
+        "emoji": "\ud83d\ude22",
+        "note": "",
+        "date": "08/10/2026",
+        "time": "05:34 PM",
+        "created_at": "2026-08-10T17:34:05.311174"
+    },
+    {
+        "id": "517836c5-d7ad-4f3a-bf23-dab000dfe076",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "",
+        "date": "08/10/2026",
+        "time": "05:40 PM",
+        "created_at": "2026-08-10T17:40:05.097528"
+    },
+    {
+        "id": "c04e3fa4-f431-4c96-8fbe-70710cdcc58e",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "qwertyui",
+        "date": "08/10/2026",
+        "time": "05:40 PM",
+        "created_at": "2026-08-10T17:40:54.177290"
+    },
+    {
+        "id": "ebc5d6ef-a07f-496c-91d5-96dcaae87c1e",
+        "mood_key": "very-happy",
+        "mood_name": "very happy",
+        "emoji": "\ud83d\ude04",
+        "note": "testing",
+        "date": "08/10/2026",
+        "time": "06:12 PM",
+        "created_at": "2026-08-10T18:12:30.900174"
+    },
+    {
+        "id": "91bea72f-46a2-42ae-af95-f5affdde453c",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "here is an optional note",
+        "date": "08/10/2026",
+        "time": "06:14 PM",
+        "created_at": "2026-08-10T18:14:26.269087"
+    },
+    {
+        "id": "35ecc80f-22ac-4313-bbda-7087d1cdcbb2",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "optional note",
+        "date": "08/10/2026",
+        "time": "06:47 PM",
+        "created_at": "2026-08-10T18:47:13.726629"
+    },
+    {
+        "id": "ca13beb0-2613-494d-86e0-c92f85c37bbf",
+        "mood_key": "happy",
+        "mood_name": "happy",
+        "emoji": "\ud83d\ude42",
+        "note": "optional note",
+        "date": "08/10/2026",
+        "time": "06:55 PM",
+        "created_at": "2026-08-10T18:55:15.225810"
     }
 ]

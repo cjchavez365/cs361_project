@@ -40,6 +40,9 @@ main {
     border-radius: 8px;
 }
 
+/*
+cancel modal
+*/
 #cancel-modal {
     position: fixed;
     inset: 0;
@@ -48,19 +51,39 @@ main {
     justify-content: center;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.55);
+    color: #222;
+    text-align: center;
 }
 
-.modal-content {
+#cancel-modal::before {
+    content: "";
+    position: absolute;
+    width: min(400px, 90%);
+    height: 230px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#cancel-modal > div {
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 400px;
     padding: 1.5rem;
-    border-radius: 8px;
-    background-color: white;
     text-align: center;
+}
+
+#cancel-modal h3,
+#cancel-modal p {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #cancel-modal button,
 #cancel-modal a {
+    position: relative;
+    z-index: 1;
     display: inline-block;
     margin: 0.25rem;
     padding: 0.65rem 1rem;
@@ -77,6 +100,9 @@ main {
     display: none !important;
 }
 
+/*
+forms
+*/
 form {
     margin-top: 1rem;
 }
@@ -103,6 +129,22 @@ textarea {
 
 form button {
     margin-right: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 #cancel-button {
@@ -110,6 +152,9 @@ form button {
     color: #222;
 }
 
+/*
+tables
+*/
 table {
     width: 100%;
     margin-top: 1rem;
@@ -131,73 +176,9 @@ table a {
     color: #222;
 }
 
-#cancel-modal {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.55);
-}
-
-#cancel-modal > div,
-#cancel-modal {
-    text-align: center;
-}
-
-#cancel-modal {
-    color: #222;
-}
-
-#cancel-modal h3,
-#cancel-modal p,
-#cancel-modal button,
-#cancel-modal a {
-    position: relative;
-    z-index: 1;
-}
-
-#cancel-modal::before {
-    content: "";
-    position: absolute;
-    width: min(400px, 90%);
-    height: 230px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-#cancel-modal h3,
-#cancel-modal p {
-    max-width: 330px;
-}
-
-.hidden {
-    display: none !important;
-}
-
-@media (max-width: 600px) {
-    main {
-        width: 95%;
-        margin: 1rem auto;
-        padding: 1rem;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 0.4rem;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    th,
-    td {
-        padding: 0.5rem;
-    }
-}
-
+/*
+home page buttons
+*/
 .home-buttons {
     display: flex;
     justify-content: center;
@@ -232,26 +213,9 @@ table a {
     font-size: 2rem;
 }
 
-.page-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-}
-
-.page-navigation a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: 1px solid #222;
-    border-radius: 4px;
-    background-color: white;
-    color: #222;
-    text-decoration: none;
-}
-
-.page-navigation a:hover {
-    background-color: #f2f2f2;
-}
-
+/*
+page navigation
+*/
 .page-navigation {
     display: flex;
     justify-content: space-between;
@@ -271,4 +235,194 @@ table a {
 
 .page-navigation a:hover {
     background-color: #f2f2f2;
+}
+
+/*
+mood entries
+*/
+.mood-entry {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.mood-entry h2 {
+    margin-top: 0;
+}
+
+.mood-entry a {
+    color: #222;
+}
+
+/*
+favorite buttons
+*/
+.favorite-button {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: white;
+    color: #222;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.favorite-button:hover {
+    background-color: #f2f2f2;
+}
+
+.favorite-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/*
+favorites page
+*/
+.favorites-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.empty-favorites {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/*
+mobile layout
+*/
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    .home-button {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .page-navigation a {
+        text-align: center;
+    }
+
+    .mood-entry {
+        padding: 0.85rem;
+    }
+}
+
+.analysis-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    z-index: 1000;
+}
+
+.analysis-modal-content {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 2rem;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+.analysis-modal-content h2 {
+    margin-top: 0;
+}
+
+.analysis-modal-content button {
+    margin-top: 1rem;
+
+    padding: 0.65rem 1rem;
+
+    border: 1px solid #222;
+    border-radius: 4px;
+
+    background-color: #222;
+    color: white;
+
+    font: inherit;
+    cursor: pointer;
+}
+
+.analysis-modal-content button:hover {
+    background-color: #444;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+}
+
+.button-link-small {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.history-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
 }

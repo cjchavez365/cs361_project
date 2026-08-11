@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const moodForm = document.querySelector("form");
+    const moodInput = document.querySelector(
+        'input[name="mood"]'
+    );
+
+    const moodForm = moodInput
+        ? moodInput.closest("form")
+        : null;
+
     const cancelButton = document.getElementById("cancel-button");
     const cancelModal = document.getElementById("cancel-modal");
     const keepEditingButton = document.getElementById(
@@ -98,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /*
-    prevents empty submission
+    prevents empty mood submission
     */
     if (moodForm) {
         moodForm.addEventListener("submit", function (event) {
@@ -112,4 +119,68 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    /*
+    save entry when enter is pressed
+    */
+    if (noteBox && moodForm) {
+        noteBox.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                moodForm.requestSubmit();
+            }
+        });
+    }
+
+    /*
+    favorite buttons
+    */
+    const favoriteForms = document.querySelectorAll(
+        'form[action*="/favorite"]'
+    );
+
+    favoriteForms.forEach(function (form) {
+        form.addEventListener("submit", function () {
+            const button = form.querySelector("button");
+
+            if (button) {
+                button.disabled = true;
+            }
+        });
+    });
 });
+
+
+const analysisModal = document.getElementById(
+    "analysis-modal"
+);
+
+const closeAnalysisButton = document.getElementById(
+    "close-analysis-button"
+);
+
+if (closeAnalysisButton) {
+    closeAnalysisButton.addEventListener(
+        "click",
+        function () {
+            if (analysisModal) {
+                analysisModal.classList.add(
+                    "hidden"
+                );
+            }
+        }
+    );
+}
+
+if (analysisModal) {
+    analysisModal.addEventListener(
+        "click",
+        function (event) {
+            if (event.target === analysisModal) {
+                analysisModal.classList.add(
+                    "hidden"
+                );
+            }
+        }
+    );
+}

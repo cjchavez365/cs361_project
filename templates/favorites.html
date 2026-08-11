@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}
+⭐ favorites ⭐
+{% endblock %}
+
+{% block content %}
+
+<div class="page-navigation">
+    <a href="{{ url_for('home') }}">
+        🏠 home
+    </a>
+
+    <a href="{{ url_for('history') }}">
+        ⬅️ mood history
+    </a>
+</div>
+
+<h1>⭐ favorites ⭐</h1>
+
+{% if entries %}
+
+    {% for entry in entries %}
+
+        <div class="mood-entry">
+
+            <h2>
+                {{ entry.emoji }}
+                {{ entry.mood_name }}
+            </h2>
+
+            <p>
+                    {{ entry.formatted_date }}
+                    at
+                    {{ entry.formatted_time }}
+            </p>
+
+            {% if entry.note %}
+
+                <p>
+                    {{ entry.note }}
+                </p>
+
+            {% else %}
+
+                <p>
+                    No note was entered.
+                </p>
+
+            {% endif %}
+
+            <a href="{{ url_for('details', entry_id=entry.id) }}">
+                more details
+            </a>
+
+            <form
+                action="{{ url_for('remove_favorite', entry_id=entry.id) }}"
+                method="POST"
+            >
+                <button
+                    class="favorite-button"
+                    type="submit"
+                >
+                    ⭐ remove favorite
+                </button>
+            </form>
+
+        </div>
+
+    {% endfor %}
+
+{% else %}
+
+    <p class="empty-favorites">
+        You don't have any favorite mood entries yet.
+    </p>
+
+{% endif %}
+
+{% endblock %}

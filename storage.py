@@ -45,3 +45,29 @@ def find_entry(entry_id):
             return entry
 
     return None
+
+def load_suggestions(emotion):
+    suggestions = {
+        "happy": [
+            "Take a moment to enjoy what went well today."
+        ],
+        "neutral": [
+            "Take a moment to reflect on your day."
+        ],
+        "sad": [
+            "Consider doing something comforting or reaching out to someone you trust."
+        ],
+        "angry": [
+            "Take a short break and give yourself some space before reacting."
+        ],
+        "stress": [
+            "Try breaking the next task into one small, manageable step."
+        ]
+    }
+
+    choices = suggestions.get(
+        emotion,
+        ["Take a moment for yourself."]
+    )
+
+    return choices[0]

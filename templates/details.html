@@ -6,59 +6,116 @@ Mood Details
 
 {% block content %}
 
-<div class="page-navigation">
-    <a href="{{ url_for('history') }}">
-        ⬅️ back to history
-    </a>
+<a href="{{ url_for('home') }}" class="button-link">
+    🏠 home
+</a>
 
-    <a href="{{ url_for('home') }}">
-        🏠 home
-    </a>
-</div>
-
-<h2>{{ entry.date }} mood entry details</h2>
+<h1>mood details</h1>
 
 <p>
+    date:
 
-<strong>time:</strong>
+    {{ entry.formatted_date }}
 
-{{ entry.time }}
+    time:
 
+    {{ entry.formatted_time }}
 </p>
 
 <p>
-
-<strong>mood:</strong>
-
-{{ entry.emoji }}
-
-{{ entry.mood_name }}
-
+    <strong>mood:</strong>
+    {{ entry.emoji }}
+    {{ entry.mood_name }}
 </p>
 
 <p>
-
-<strong>note:</strong>
-
+    <strong>note:</strong>
 </p>
 
 {% if entry.note %}
 
 <p>
-
-{{ entry.note }}
-
+    {{ entry.note }}
 </p>
 
 {% else %}
 
 <p>
-
-No note was entered.
-
+    No note was entered.
 </p>
 
 {% endif %}
 
+
+{% if entry.is_favorite %}
+
+<form
+    action="{{ url_for('remove_favorite', entry_id=entry.id) }}"
+    method="POST"
+>
+    <button type="submit">
+        ⭐ remove from favorites
+    </button>
+</form>
+
+{% else %}
+
+<form
+    action="{{ url_for('add_favorite', entry_id=entry.id) }}"
+    method="POST"
+>
+    <button type="submit">
+        ☆ add to favorites
+    </button>
+</form>
+
+{% endif %}
+
+{% if analysis %}
+
+<div
+    id="analysis-modal"
+    class="analysis-modal"
+>
+    <div class="analysis-modal-content">
+
+        <h2>
+            ✨ entry analysis ✨
+        </h2>
+
+        <p>
+            Your entry appears to express:
+        </p>
+
+        <h3>
+            {{ analysis }}
+        </h3>
+
+        {% if confidence %}
+        <p>
+            confidence:
+            {{ confidence }}%
+        </p>
+        {% endif %}
+
+        <h3>
+            suggestion
+        </h3>
+
+        <p>
+            {{ suggestion }}
+        </p>
+
+        <button
+            type="button"
+            id="close-analysis-button"
+        >
+            continue
+        </button>
+
+    </div>
+</div>
+
+{% endif %}
 
 {% endblock %}
